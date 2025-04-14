@@ -5,6 +5,11 @@
 
 t_node	*create_node(int value);
 void	add_node(t_node **head, int value);
+void	push(t_node **src_head, t_node **dest_head);
+void    rotate(t_node **head);
+void    reverse_rotate(t_node **head);
+void swap(t_node **head);
+
 
 typedef struct 	s_node
 {

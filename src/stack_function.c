@@ -2,7 +2,7 @@
 
 t_node	*create_node(int value)
 {
-	t_node *node;
+	t_node	*node;
 
 	node = (t_node*)malloc(sizeof(t_node));
 	if(!node)
@@ -13,8 +13,8 @@ t_node	*create_node(int value)
 }
 void	add_node(t_node **head, int value)
 {
-	t_node *node;
-	t_node *temp;
+	t_node	*node;
+	t_node	*temp;
 
 	node = create_node(value);
 	if(!head)

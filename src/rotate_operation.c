@@ -1,18 +1,19 @@
 #include "../includes/push_swap.h"
 
-/*
-ra (rotate a): Shift up all elements of stack a by 1.
-The first element becomes the last one.
-rb (rotate b): Shift up all elements of stack b by 1.
-The first element becomes the last one.
-rr : ra and rb at the same time.
-rra (reverse rotate a): Shift down all elements of stack a by 1.
-The last element becomes the first one.
-rrb (reverse rotate b): Shift down all elements of stack b by 1.
-The last element becomes the first one.
-rrr : rra and rrb at the same time.
-*/
-void rotate(t_node **stack)
+void    rotate_a(t_node **head_a)
 {
+rotate(head_a);
+ft_printf("ra\n");
+}
+void    rotate_b(t_node **head_b)
+{
+    rotate(head_b);
+    ft_printf("rb\n");
+}
 
+void    rotate_r(t_node **head_a, t_node **head_b)
+{
+    rotate(head_a);
+    rotate(head_b);
+    ft_printf("rr\n");
 }
