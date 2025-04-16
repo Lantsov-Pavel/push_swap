@@ -18,4 +18,3 @@ void swap_s(t_node **a_head, t_node **b_head)
 	swap(b_head);
 	ft_printf("ss\n");
 }
-

@@ -1,6 +1,5 @@
 #include "../includes/push_swap.h"
 
-
 void    reverse_rotate_a(t_node **head_a)
 {
     reverse_rotate(head_a);

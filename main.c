@@ -1,20 +1,27 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: plantsov <plantsov@student.42berlin.d      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/21 19:19:48 by plantsov          #+#    #+#             */
-/*   Updated: 2025/03/21 19:20:00 by plantsov         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "includes/push_swap.h"
 
 int main(int argc, char **argv)
 {
-	if(argc == 1)
-		return(0);
-	
+	t_node *head;
+	char** s;
+	int	i;
+	int j;
+
+	head = NULL;
+	i = 1;
+	while ( i < argc)
+	{
+		s = ft_split(argv[i], ' ');
+		j = 0;
+		while(s[j])
+			{
+				add_node(&head, ft_atoi(s[j]));
+				free(s[j]);
+				j++;
+			}
+			free(s);
+			i++;
+	}
+	print_stack(head);
+	return (0);
 }

@@ -17,16 +17,23 @@ void	add_node(t_node **head, int value)
 	t_node	*temp;
 
 	node = create_node(value);
-	if(!head)
+	if(*head == NULL)
 	{
-		head = node;
+		*head = node;
 		return;
 	}
-	temp = head;   
+	temp = *head;
 	while(temp->next!=NULL)
-	{
+
 		temp = temp->next;
-	}
 	temp->next = node;
 }
-
+// test_func;
+void	print_stack(t_node *head)
+{
+	while (head)
+	{
+		ft_printf("%d\n", head->value);
+		head = head->next;
+	}
+}
