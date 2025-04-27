@@ -22,6 +22,8 @@ int main(int argc, char **argv)
 			free(s);
 			i++;
 	}
+	sort(&head);
 	print_stack(head);
+	ft_printf("\n%d\n", stack_size(head));
 	return (0);
 }

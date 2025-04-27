@@ -17,6 +17,8 @@ void	add_node(t_node **head, int value)
 	t_node	*temp;
 
 	node = create_node(value);
+	if(!node)
+		return;
 	if(*head == NULL)
 	{
 		*head = node;
@@ -24,16 +26,28 @@ void	add_node(t_node **head, int value)
 	}
 	temp = *head;
 	while(temp->next!=NULL)
-
 		temp = temp->next;
 	temp->next = node;
 }
 // test_func;
-void	print_stack(t_node *head)
+void	print_stack(t_node *stack)
 {
-	while (head)
+	while (stack)
 	{
-		ft_printf("%d\n", head->value);
-		head = head->next;
+		ft_printf("%d\n", stack->value);
+		stack = stack->next;
 	}
+}
+
+int		stack_size(t_node *stack)
+{
+	int size;
+
+	size = 0;
+	while (stack)
+	{
+		size++;
+		stack = stack->next;
+	}
+	return size;
 }
