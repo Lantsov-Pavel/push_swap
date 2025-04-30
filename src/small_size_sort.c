@@ -27,10 +27,8 @@ static void    equal_three_nodes(t_node **stack, int first, int second, int thir
 }
 void    sort_two_nodes(t_node **stack)
 {
-    if((*stack)->value > (*stack)->next->next)
-    {
+    if((*stack)->value > (*stack)->next->value)
         swap_a(stack);
-    }
 }
 void    sort_three_nodes(t_node **stack)
 {

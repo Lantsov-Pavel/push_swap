@@ -3,11 +3,13 @@
 int main(int argc, char **argv)
 {
 	t_node *head;
+	t_node *stack_b;
 	char** s;
 	int	i;
 	int j;
 
 	head = NULL;
+	stack_b = NULL;
 	i = 1;
 	while ( i < argc)
 	{
@@ -22,7 +24,7 @@ int main(int argc, char **argv)
 			free(s);
 			i++;
 	}
-	sort(&head);
+	sort((&head), (&stack_b));
 	print_stack(head);
 	ft_printf("\n%d\n", stack_size(head));
 	return (0);
