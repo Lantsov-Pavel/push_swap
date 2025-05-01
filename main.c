@@ -2,13 +2,13 @@
 
 int main(int argc, char **argv)
 {
-	t_node *head;
+	t_node *stack_a;
 	t_node *stack_b;
 	char** s;
 	int	i;
 	int j;
 
-	head = NULL;
+	stack_a = NULL;
 	stack_b = NULL;
 	i = 1;
 	while ( i < argc)
@@ -17,15 +17,14 @@ int main(int argc, char **argv)
 		j = 0;
 		while(s[j])
 			{
-				add_node(&head, ft_atoi(s[j]));
+				add_node(&stack_a, ft_atoi(s[j]));
 				free(s[j]);
 				j++;
 			}
 			free(s);
 			i++;
 	}
-	sort((&head), (&stack_b));
-	print_stack(head);
-	ft_printf("\n%d\n", stack_size(head));
+	sort((&stack_a), (&stack_b));
+	print_stack(stack_a);
 	return (0);
 }
