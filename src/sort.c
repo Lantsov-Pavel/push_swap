@@ -13,4 +13,6 @@ void sort(t_node **stack_a, t_node **stack_b)
         sort_four_nodes(stack_a, stack_b);
     else if (size == 5)
         sort_five_nodes(stack_a, stack_b);
+    else
+        radix_sort(stack_a, stack_b);
 }

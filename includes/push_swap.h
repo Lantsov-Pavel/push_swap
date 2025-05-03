@@ -33,6 +33,7 @@ void sort(t_node **stack_a, t_node **stack_b);
 void sort_two_nodes(t_node **stack);
 void sort_three_nodes(t_node **stack);
 void swap_a(t_node **head_a);
+void radix_sort(t_node **stack_a, t_node **stack_b);
 void rotate_a(t_node **head_a);
 void reverse_rotate_a(t_node **head_a);
 void sort_four_nodes(t_node **stack_a, t_node **stack_b);
