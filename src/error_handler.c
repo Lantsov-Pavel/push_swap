@@ -14,7 +14,7 @@ static void check_empty(int argc, char **argv)
         i++;
     }
 }
-static void check_digit(int argc, char **argv)
+static void check_digit(char **argv)
 {
     int i;
     int j;
@@ -74,7 +74,7 @@ static void check_duplicates(char **argv)
 void check_errors(int argc, char **argv)
 {
     check_empty(argc, argv);
-    check_digit(argc,argv);
+    check_digit(argv);
     check_limit(argv);
     check_duplicates(argv);
 }
