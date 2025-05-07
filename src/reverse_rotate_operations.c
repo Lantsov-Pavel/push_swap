@@ -1,6 +1,6 @@
 #include "../includes/push_swap.h"
 
-static void reverse_rotate(t_node **stack)
+static void	reverse_rotate(t_node **stack)
 {
 	t_node *previous;
 	t_node *current;
@@ -19,21 +19,17 @@ static void reverse_rotate(t_node **stack)
 	*stack = current;
 }
 
-void reverse_rotate_a(t_node **a_stack)
+void	reverse_rotate_a(t_node **a_stack)
 {
-	if (!a_stack)
-		return;
 	reverse_rotate(a_stack);
 	ft_printf("rra\n");
 }
-void reverse_rotate_b(t_node **b_stack)
+void	reverse_rotate_b(t_node **b_stack)
 {
-	if (!b_stack)
-		return;
 	reverse_rotate(b_stack);
 	ft_printf("rrb\n");
 }
-void reverse_rotate_r(t_node **a_stack, t_node **b_stack)
+void	reverse_rotate_r(t_node **a_stack, t_node **b_stack)
 {
 	reverse_rotate(a_stack);
 	reverse_rotate(b_stack);

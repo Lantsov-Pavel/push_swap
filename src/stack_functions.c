@@ -1,6 +1,6 @@
 #include "../includes/push_swap.h"
 
-t_node *create_node(int value)
+t_node	*create_node(int value)
 {
 	t_node *node;
 
@@ -11,7 +11,7 @@ t_node *create_node(int value)
 	node->next = NULL;
 	return node;
 }
-void add_node(t_node **head, int value)
+void	add_node(t_node **head, int value)
 {
 	t_node *node;
 	t_node *temp;
@@ -29,8 +29,8 @@ void add_node(t_node **head, int value)
 		temp = temp->next;
 	temp->next = node;
 }
-// test_func;
-void print_stack(t_node *stack)
+
+void	print_stack(t_node *stack)
 {
 	while (stack)
 	{
@@ -40,7 +40,7 @@ void print_stack(t_node *stack)
 	}
 }
 
-int stack_size(t_node *stack)
+int	stack_size(t_node *stack)
 {
 	int size;
 

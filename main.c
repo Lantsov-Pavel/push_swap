@@ -1,12 +1,12 @@
 #include "includes/push_swap.h"
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-	t_node *a_stack;
-	t_node *b_stack;
-	char **s;
-	int i;
-	int j;
+	t_node	*a_stack;
+	t_node	*b_stack;
+	char	**s;
+	int		i;
+	int		j;
 
 	check_errors(argc, argv);
 	a_stack = NULL;
@@ -26,6 +26,6 @@ int main(int argc, char **argv)
 		i++;
 	}
 	sort((&a_stack), (&b_stack));
-	print_stack(a_stack);
+	// print_stack(a_stack);
 	return (0);
 }

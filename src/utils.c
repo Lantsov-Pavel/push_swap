@@ -1,11 +1,11 @@
 #include "../includes/push_swap.h"
 
-void exit_with_error()
+void	exit_with_error()
 {
     ft_printf("Error\n");
     exit(1);
 }
-static void sort_arr(int *arr, int size)
+static void	sort_arr(int *arr, int size)
 {
     int i;
     int j;
@@ -29,7 +29,7 @@ static void sort_arr(int *arr, int size)
     }
 }
 
-static void put_index(int *arr, t_node **stack, int size)
+static void	put_index(int *arr, t_node **stack, int size)
 {
     t_node *current_node;
     int i;
@@ -50,12 +50,12 @@ static void put_index(int *arr, t_node **stack, int size)
         current_node = current_node->next;
     }
 }
-void index_stack(t_node **stack)
+void	index_stack(t_node **stack)
 {
-    t_node *current_node;
-    int *arr;
-    int size;
-    int i;
+    t_node 	*current_node;
+    int 	*arr;
+    int 	size;
+    int 	i;
 
     size = stack_size(*stack);
     arr = (int *)malloc(sizeof(int) * size);

@@ -3,7 +3,7 @@
 static void check_empty(int argc, char **argv)
 {
     int i;
-    
+
     if (argc == 1)
         exit(0);
     i = 1;
@@ -23,7 +23,7 @@ static void check_digit(char **argv)
     while (argv[i])
     {
         j = 0;
-        if ((argv[i][j] == '-')||(argv[i][j] == '-'))
+        if ((argv[i][j] == '-') || (argv[i][j] == '-'))
             j++;
         if (!argv[i][j])
             exit_with_error();

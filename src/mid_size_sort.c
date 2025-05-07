@@ -1,6 +1,6 @@
 #include "../includes/push_swap.h"
 
-static int find_minimal_position(t_node *stack)
+static int	find_minimal_position(t_node *stack)
 {
     int position;
     int min_value;
@@ -22,7 +22,7 @@ static int find_minimal_position(t_node *stack)
     }
     return position;
 }
-static void put_on_top_min(int min_position, t_node **stack_a)
+static void	put_on_top_min(int min_position, t_node **stack_a)
 {
     int size;
     
@@ -45,7 +45,7 @@ static void put_on_top_min(int min_position, t_node **stack_a)
     }
 }
 
-void sort_four_nodes(t_node **stack_a, t_node **stack_b)
+void	sort_four_nodes(t_node **stack_a, t_node **stack_b)
 {
     int min_position;
 
@@ -56,10 +56,10 @@ void sort_four_nodes(t_node **stack_a, t_node **stack_b)
     push_a(stack_a, stack_b);
 }
 
-void sort_five_nodes(t_node **stack_a, t_node **stack_b)
+void	sort_five_nodes(t_node **stack_a, t_node **stack_b)
 {
-    int first_min_position;
-    int second_min_position;
+    int	first_min_position;
+    int	second_min_position;
 
     first_min_position = find_minimal_position((*stack_a));
     put_on_top_min(first_min_position, stack_a);

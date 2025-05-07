@@ -1,6 +1,6 @@
 #include "../includes/push_swap.h"
 
-static void equal_three_nodes(t_node **stack, int first, int second, int third)
+static void	equal_three_nodes(t_node **stack, int first, int second, int third)
 {
     if (first < second && second > third && first < third)
     {
@@ -25,16 +25,16 @@ static void equal_three_nodes(t_node **stack, int first, int second, int third)
         reverse_rotate_a(stack);
     }
 }
-void sort_two_nodes(t_node **stack)
+void	sort_two_nodes(t_node **stack)
 {
     if ((*stack)->value > (*stack)->next->value)
         swap_a(stack);
 }
-void sort_three_nodes(t_node **stack)
+void	sort_three_nodes(t_node **stack)
 {
-    int first;
-    int second;
-    int third;
+    int	first;
+    int	second;
+    int	third;
 
     first = (*stack)->value;
     second = (*stack)->next->value;

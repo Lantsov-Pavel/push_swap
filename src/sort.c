@@ -1,6 +1,6 @@
 #include "../includes/push_swap.h"
 
-void sort(t_node **a_stack, t_node **b_stack)
+void	sort(t_node **a_stack, t_node **b_stack)
 {
     int size;
 
@@ -14,7 +14,7 @@ void sort(t_node **a_stack, t_node **b_stack)
     else if (size == 5)
         sort_five_nodes(a_stack, b_stack);
     else
-    index_stack(a_stack);
-    print_stack(*a_stack);
-        radix_sort(a_stack, b_stack);
+        index_stack(a_stack);
+    // print_stack(*a_stack);
+    radix_sort(a_stack, b_stack);
 }
