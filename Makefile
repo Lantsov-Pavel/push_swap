@@ -12,7 +12,6 @@ SRCS = main.c \
 	$(SRC_DIR)/big_size_sort.c \
 	$(SRC_DIR)/error_handler.c \
 	$(SRC_DIR)/mid_size_sort.c \
-	$(SRC_DIR)/operations.c \
 	$(SRC_DIR)/push_operations.c \
 	$(SRC_DIR)/reverse_rotate_operations.c \
 	$(SRC_DIR)/rotate_operation.c \

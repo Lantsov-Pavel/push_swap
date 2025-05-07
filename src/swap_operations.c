@@ -1,5 +1,18 @@
 #include "../includes/push_swap.h"
 
+static void swap(t_node **head)
+{
+	t_node *first;
+	t_node *second;
+
+	if (*head == NULL || (*head)->next == NULL)
+		return;
+	first = *head;
+	second = first->next;
+	first->next = second->next;
+	second->next = first;
+	*head = second;
+}
 void swap_a(t_node **head)
 {
 	swap(head);
