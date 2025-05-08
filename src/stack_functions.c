@@ -35,7 +35,7 @@ int	stack_size(t_node *stack)
 	int	size;
 
 	if (!stack)
-		return (-1);
+		return (0);
 	size = 0;
 	while (stack)
 	{

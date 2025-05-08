@@ -39,7 +39,7 @@ static void	put_on_top_min(int min_position, t_node **stack_a)
     }
     else if((min_position == 2 && size == 5)||(min_position == 3))
         reverse_rotate_a(stack_a);
-    else if ((*stack_a) && min_position == 4)
+    else if (min_position == 4)
     {
         reverse_rotate_a(stack_a);
         reverse_rotate_a(stack_a);

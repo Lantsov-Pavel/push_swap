@@ -11,8 +11,9 @@ static void check_empty(int argc, char **argv)
     while (argv[i])
     {
         j = 0;
-        
-        if (argv[i][0] == '\0')
+        while(argv[i][j] && argv[i][j] == ' ')
+            j++;
+        if (argv[i][j] == '\0')
             exit_with_error();
         i++;
     }

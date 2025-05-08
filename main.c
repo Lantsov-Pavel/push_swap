@@ -19,10 +19,9 @@ static void fill_stack(int argc, char **argv, t_node **a_stack)
 			free(s[j]);
 			j++;
 		}
-		free(s[j]);
+		free(s);
 		i++;
 	}
-	free(s);
 }
 
 int main(int argc, char **argv)
