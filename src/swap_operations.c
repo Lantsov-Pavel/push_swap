@@ -1,33 +1,33 @@
 #include "../includes/push_swap.h"
 
-static void	swap(t_node **head)
+static void	swap(t_node **stack)
 {
-	t_node *first;
-	t_node *second;
+	t_node	*first;
+	t_node	*second;
 
-	if (*head == NULL || (*head)->next == NULL)
+	if (*stack == NULL || (*stack)->next == NULL)
 		return;
-	first = *head;
+	first = *stack;
 	second = first->next;
 	first->next = second->next;
 	second->next = first;
-	*head = second;
+	*stack = second;
 }
-void	swap_a(t_node **head)
+void	swap_a(t_node **a_stack)
 {
-	swap(head);
+	swap(a_stack);
 	ft_printf("sa\n");
 }
 
-void	swap_b(t_node **head)
+void	swap_b(t_node **b_stack)
 {
-	swap(head);
+	swap(b_stack);
 	ft_printf("sb\n");
 }
 
-void	swap_s(t_node **a_head, t_node **b_head)
+void	swap_s(t_node **a_stack, t_node **b_stack)
 {
-	swap(a_head);
-	swap(b_head);
+	swap(a_stack);
+	swap(b_stack);
 	ft_printf("ss\n");
 }

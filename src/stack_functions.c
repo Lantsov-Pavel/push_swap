@@ -2,7 +2,7 @@
 
 t_node	*create_node(int value)
 {
-	t_node *node;
+	t_node	*node;
 
 	node = (t_node *)malloc(sizeof(t_node));
 	if (!node)
@@ -13,8 +13,8 @@ t_node	*create_node(int value)
 }
 void	add_node(t_node **head, int value)
 {
-	t_node *node;
-	t_node *temp;
+	t_node	*node;
+	t_node	*temp;
 
 	node = create_node(value);
 	if (!node)
@@ -30,25 +30,33 @@ void	add_node(t_node **head, int value)
 	temp->next = node;
 }
 
-void	print_stack(t_node *stack)
-{
-	while (stack)
-	{
-		ft_printf("value = %d    ", stack->value);
-		ft_printf("index = %d\n", stack->index);
-		stack = stack->next;
-	}
-}
-
 int	stack_size(t_node *stack)
 {
-	int size;
+	int	size;
 
+	if (!stack)
+		return (-1);
 	size = 0;
 	while (stack)
 	{
 		size++;
 		stack = stack->next;
 	}
-	return size;
+	return (size);
+}
+void	free_stack(t_node **stack)
+{
+	t_node	*node;
+	t_node	*next;
+
+	if (!stack || !(*stack))
+		return;
+	node = *stack;
+	while (node)
+	{
+		next = node->next;
+		free(node);
+		node = next;
+	}
+	*stack = NULL;
 }

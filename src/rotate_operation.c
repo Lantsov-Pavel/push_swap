@@ -2,11 +2,11 @@
 
 static void	rotate(t_node **stack)
 {
+	t_node	*first;
+	t_node	*last;
+
 	if (*stack == NULL || (*stack)->next == NULL)
 		return;
-	t_node *first;
-	t_node *last;
-
 	first = *stack;
 	last = *stack;
 	while (last->next)

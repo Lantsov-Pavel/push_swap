@@ -2,8 +2,8 @@
 
 static void	reverse_rotate(t_node **stack)
 {
-	t_node *previous;
-	t_node *current;
+	t_node	*previous;
+	t_node	*current;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 		return;

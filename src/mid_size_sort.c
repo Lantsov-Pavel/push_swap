@@ -6,10 +6,11 @@ static int	find_minimal_position(t_node *stack)
     int min_value;
     int i;
 
+    if(!stack)
+        return (-1);
     position = 0;
     min_value = stack->value;
     i = 0;
-
     while (stack)
     {
         if (stack->value < min_value)

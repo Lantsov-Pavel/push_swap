@@ -5,6 +5,7 @@ static void	put_nodes_back(t_node **stack_a, t_node **stack_b)
 	while(*stack_b)
 		push_a(stack_a, stack_b);
 }
+
 static void	sort_condition(t_node **stack_a, t_node **stack_b, int i)
 {
 	if ((((*stack_a)->index >> i) & 1) == 0)
@@ -28,10 +29,10 @@ void	radix_sort(t_node **stack_a, t_node **stack_b)
 	i = 0;
 	while (i < max_bits)
 	{
-		j = 0:
+		j = 0;
 			while (j < size)
 			{
-				sort_condition(stack_a, stack_b, i):
+				sort_condition(stack_a, stack_b, i);
 				j++;
 			}
 		put_nodes_back(stack_a, stack_b);

@@ -3,17 +3,21 @@
 static void check_empty(int argc, char **argv)
 {
     int i;
+    int j;
 
     if (argc == 1)
         exit(0);
     i = 1;
     while (argv[i])
     {
+        j = 0;
+        
         if (argv[i][0] == '\0')
             exit_with_error();
         i++;
     }
 }
+
 static void check_digit(char **argv)
 {
     int i;
@@ -23,7 +27,7 @@ static void check_digit(char **argv)
     while (argv[i])
     {
         j = 0;
-        if ((argv[i][j] == '-') || (argv[i][j] == '-'))
+        if ((argv[i][j] == '-') || (argv[i][j] == '+'))
             j++;
         if (!argv[i][j])
             exit_with_error();
@@ -39,8 +43,8 @@ static void check_digit(char **argv)
 
 static void check_limit(char **argv)
 {
-    int i;
-    long number;
+    int     i;
+    long    number;
 
     i = 1;
     while (argv[i])
@@ -51,6 +55,7 @@ static void check_limit(char **argv)
         i++;
     }
 }
+
 static void check_duplicates(char **argv)
 {
     int i;
@@ -71,7 +76,8 @@ static void check_duplicates(char **argv)
         i++;
     }
 }
-void check_errors(int argc, char **argv)
+
+void    check_errors(int argc, char **argv)
 {
     check_empty(argc, argv);
     check_digit(argv);

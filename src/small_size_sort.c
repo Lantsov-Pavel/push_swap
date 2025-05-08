@@ -13,20 +13,16 @@ static void	equal_three_nodes(t_node **stack, int first, int second, int third)
         swap_a(stack);
     }
     else if (first > second && second < third && first > third)
-    {
         rotate_a(stack);
-    }
     else if (first > second && second < third && first < third)
-    {
         swap_a(stack);
-    }
-    else if (first > second && second < third && first > third)
-    {
+    else if (first < second && second > third && first > third)
         reverse_rotate_a(stack);
-    }
 }
 void	sort_two_nodes(t_node **stack)
 {
+    if(!*stack ||!(*stack)->next)
+        return;
     if ((*stack)->value > (*stack)->next->value)
         swap_a(stack);
 }
@@ -35,7 +31,9 @@ void	sort_three_nodes(t_node **stack)
     int	first;
     int	second;
     int	third;
-
+    
+    if(!*stack || !(*stack)->next || !(*stack)->next->next)
+        return;
     first = (*stack)->value;
     second = (*stack)->next->value;
     third = (*stack)->next->next->value;
