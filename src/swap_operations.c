@@ -6,13 +6,14 @@ static void	swap(t_node **stack)
 	t_node	*second;
 
 	if (*stack == NULL || (*stack)->next == NULL)
-		return;
+		return ;
 	first = *stack;
 	second = first->next;
 	first->next = second->next;
 	second->next = first;
 	*stack = second;
 }
+
 void	swap_a(t_node **a_stack)
 {
 	swap(a_stack);

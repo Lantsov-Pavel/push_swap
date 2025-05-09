@@ -2,9 +2,9 @@
 
 static void	sort_arr(int *arr, int size)
 {
-	int i;
-	int j;
-	int temp;
+	int	i;
+	int	j;
+	int	temp;
 
 	i = 0;
 	while (i < size - 1)
@@ -38,13 +38,14 @@ static void	put_index(int *arr, t_node **stack, int size)
 			if (current_node->value == arr[i])
 			{
 				current_node->index = i;
-				break;
+				break ;
 			}
 			i++;
 		}
 		current_node = current_node->next;
 	}
 }
+
 void	index_stack(t_node **stack)
 {
 	t_node	*current_node;
@@ -54,10 +55,10 @@ void	index_stack(t_node **stack)
 
 	size = stack_size(*stack);
 	if (size <= 0)
-		return;
+		return ;
 	arr = (int *)malloc(sizeof(int) * size);
 	if (!arr)
-		return;
+		return ;
 	i = 0;
 	current_node = (*stack);
 	while (current_node)
@@ -76,7 +77,7 @@ void	sort(t_node **a_stack, t_node **b_stack)
 	int	size;
 
 	if (!(*a_stack))
-		return;
+		return ;
 	size = stack_size(*a_stack);
 	if (size == 2)
 		sort_two_nodes(a_stack);

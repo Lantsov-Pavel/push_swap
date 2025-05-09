@@ -5,8 +5,7 @@ static void	push(t_node **src_head, t_node **dest_head)
 	t_node	*first;
 
 	if (!src_head || !*src_head)
-		return;
-
+		return ;
 	first = *src_head;
 	*src_head = first->next;
 	first->next = *dest_head;

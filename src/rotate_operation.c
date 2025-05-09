@@ -6,7 +6,7 @@ static void	rotate(t_node **stack)
 	t_node	*last;
 
 	if (*stack == NULL || (*stack)->next == NULL)
-		return;
+		return ;
 	first = *stack;
 	last = *stack;
 	while (last->next)
@@ -15,11 +15,13 @@ static void	rotate(t_node **stack)
 	first->next = NULL;
 	last->next = first;
 }
+
 void	rotate_a(t_node **a_stack)
 {
 	rotate(a_stack);
 	ft_printf("ra\n");
 }
+
 void	rotate_b(t_node **b_stack)
 {
 	rotate(b_stack);

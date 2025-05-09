@@ -6,11 +6,12 @@ t_node	*create_node(int value)
 
 	node = (t_node *)malloc(sizeof(t_node));
 	if (!node)
-		return NULL;
+		return (NULL);
 	node->value = value;
 	node->next = NULL;
-	return node;
+	return (node);
 }
+
 void	add_node(t_node **head, int value)
 {
 	t_node	*node;
@@ -18,11 +19,11 @@ void	add_node(t_node **head, int value)
 
 	node = create_node(value);
 	if (!node)
-		return;
+		return ;
 	if (*head == NULL)
 	{
 		*head = node;
-		return;
+		return ;
 	}
 	temp = *head;
 	while (temp->next != NULL)
@@ -44,13 +45,14 @@ int	stack_size(t_node *stack)
 	}
 	return (size);
 }
+
 void	free_stack(t_node **stack)
 {
 	t_node	*node;
 	t_node	*next;
 
 	if (!stack || !(*stack))
-		return;
+		return ;
 	node = *stack;
 	while (node)
 	{

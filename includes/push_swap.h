@@ -1,20 +1,20 @@
 #ifndef PUSH_SWAP_H
-#define PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-#include <limits.h>
-#include "libft/libft.h"
+# include <limits.h>
+# include "libft/libft.h"
 
 typedef struct s_node
 {
-	int value;
-	int index;
-	struct s_node *next;
-} t_node;
+	int				value;
+	int				index;
+	struct s_node	*next;
+}	t_node;
 
 t_node	*create_node(int value);
 void	add_node(t_node **head, int value);
 void	check_errors(int argc, char **argv);
-void	exit_with_error();
+void	exit_with_error(void);
 void	free_stack(t_node **stack);
 long	ft_atol(const char *str);
 void	index_stack(t_node **stack);
