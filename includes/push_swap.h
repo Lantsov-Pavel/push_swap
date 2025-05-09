@@ -17,7 +17,6 @@ void	check_errors(int argc, char **argv);
 void	exit_with_error(void);
 void	free_stack(t_node **stack);
 long	ft_atol(const char *str);
-void	index_stack(t_node **stack);
 void	print_stack(t_node *head);
 void	push_a(t_node **a_head, t_node **b_head);
 void	push_b(t_node **a_head, t_node **b_head);

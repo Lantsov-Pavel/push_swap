@@ -46,7 +46,7 @@ static void	put_index(int *arr, t_node **stack, int size)
 	}
 }
 
-void	index_stack(t_node **stack)
+static void	index_stack(t_node **stack)
 {
 	t_node	*current_node;
 	int		*arr;
