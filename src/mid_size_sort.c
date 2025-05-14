@@ -63,7 +63,7 @@ void	sort_five_nodes(t_node **a_stack, t_node **b_stack)
 {
 	int	first_min_position;
 
-	first_min_position = find_minimal_position(*b_stack);
+	first_min_position = find_minimal_position(*a_stack);
 	put_on_top_min(first_min_position, a_stack);
 	push_b(a_stack, b_stack);
 	sort_four_nodes(a_stack, b_stack);
