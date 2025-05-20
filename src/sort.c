@@ -1,5 +1,20 @@
 #include "../includes/push_swap.h"
 
+static int isSorted(t_node *a_stack)
+{
+	int 	temp;
+
+	temp = (a_stack)->value;
+	while((a_stack)->next != NULL)
+	{
+		(a_stack) = (a_stack) -> next;
+		if (temp > (a_stack)->value)
+			return (1);
+		temp = (a_stack)->value;
+	}
+	return (0);
+}
+
 static void	sort_arr(int *arr, int size)
 {
 	int	i;
@@ -77,6 +92,8 @@ void	sort(t_node **a_stack, t_node **b_stack)
 	int	size;
 
 	if (!(*a_stack))
+		return ;
+	if(isSorted(*a_stack) != 1)
 		return ;
 	size = stack_size(*a_stack);
 	if (size == 2)
